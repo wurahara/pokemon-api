@@ -28,7 +28,7 @@ jobs:
         run: chmod +x gradlew
 
       - name: Build with Gradle
-        run: gradlew build
+        run: ./gradlew build
         env:
           DB_URL: ${{ secrets.ENV_DB_URL }}
           DB_PORT: ${{ secrets.ENV_DB_PORT }}
