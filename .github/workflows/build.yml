@@ -29,6 +29,11 @@ jobs:
 
       - name: Build with Gradle
         run: ./gradlew build
+        env:
+          DB_URL: ${{ secrets.ENV_DB_URL }}
+          DB_PORT: ${{ secrets.ENV_DB_PORT }}
+          DB_USER: ${{ secrets.ENV_DB_USER }}
+          DB_PASSWORD: ${{ secrets.ENV_DB_PASSWORD }}
 
       - name: Archieve production artifacts
         uses: actions/upload-artifact@v2
