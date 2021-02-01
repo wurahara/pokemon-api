@@ -15,6 +15,11 @@ on:
 jobs:
   build:
     runs-on: ubuntu-20.04
+    env:
+      DB_URL: ${{ secrets.ENV_DB_URL }}
+      DB_PORT: ${{ secrets.ENV_DB_PORT }}
+      DB_USER: ${{ secrets.ENV_DB_USER }}
+      DB_PASSWORD: ${{ secrets.ENV_DB_PASSWORD }}
     steps:
       - name: Checkout repository
         uses: actions/checkout@v2
@@ -30,8 +35,6 @@ jobs:
       - name: Test env
         run: |
           echo "$DB_URL"
-        env:
-          DB_URL: ${{ secrets.ENV_DB_URL }}
 
 #      - name: Build with Gradle
 #        run: ./gradlew build
