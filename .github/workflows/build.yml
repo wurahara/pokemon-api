@@ -28,10 +28,10 @@ jobs:
 #        run: chmod +x gradlew
 
       - name: Test env
-        env:
-          DB_URL: ${{ secrets.ENV_DB_URL }}
         run: |
           echo "$DB_URL"
+        env:
+          DB_URL: ${{ secrets.ENV_DB_URL }}
 
 #      - name: Build with Gradle
 #        run: ./gradlew build
