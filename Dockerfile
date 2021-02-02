@@ -1,8 +1,5 @@
 FROM openjdk:11-jre-slim
 ARG DB_URL
-ARG DB_PORT
-ARG DB_USER
-ARG DB_PASS
 COPY . /usr/src/myapp
 WORKDIR /usr/src/myapp
 ENTRYPOINT [
