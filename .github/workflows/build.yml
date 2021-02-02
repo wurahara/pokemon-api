@@ -66,8 +66,8 @@ jobs:
           file: ./Dockerfile
           push: true
           tags: wurahara/poke:latest
-          build-args: |
-            DB_URL=${{ secrets.ENV_DB_URL }}
-            DB_PORT=${{ secrets.ENV_DB_PORT }}
-            DB_USER=${{ secrets.ENV_DB_USER }}
-            DB_PASS=${{ secrets.ENV_DB_PASSWORD }}
+#          build-args: |
+#            DB_URL=${{ secrets.ENV_DB_URL }}
+#            DB_PORT=${{ secrets.ENV_DB_PORT }}
+#            DB_USER=${{ secrets.ENV_DB_USER }}
+#            DB_PASS=${{ secrets.ENV_DB_PASSWORD }}
