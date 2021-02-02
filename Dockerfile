@@ -12,8 +12,7 @@ ENV ENV_DB_PASS ${DB_PASS}
 
 COPY . /usr/src/myapp
 WORKDIR /usr/src/myapp
-ENTRYPOINT [\
-    "java",\
+ENTRYPOINT ["java",\
     "-jar", "/usr/src/myapp/build/libs/pokemon-0.0.1-SNAPSHOT.jar",\
     "-Dspring.profiles.active=prod"\
 ]
