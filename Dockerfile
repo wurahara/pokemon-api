@@ -1,4 +1,4 @@
 FROM openjdk:11-jre-slim
 COPY . /usr/src/myapp
 WORKDIR /usr/src/myapp
-ENTRYPOINT ["java","-jar","/build/libs/pokemon-0.0.1-SNAPSHOT.jar"]
+ENTRYPOINT ["java","-jar","/usr/src/myapp/build/libs/pokemon-0.0.1-SNAPSHOT.jar"]
