@@ -1,7 +1,5 @@
 FROM openjdk:11-jre-slim
 
-EXPOSE 8080
-
 ARG DB_URL
 ARG DB_PORT
 ARG DB_USER
