@@ -42,9 +42,6 @@ jobs:
     runs-on: ubuntu-20.04
     needs: build
     steps:
-      - name: Setup QEMU
-        uses: docker/setup-qemu-action@v1
-
       - name: Setup docker buildx
         uses: docker/setup-buildx-action@v1
 
@@ -66,6 +63,7 @@ jobs:
           file: ./Dockerfile
           push: true
           tags: wurahara/poke:latest
+
 #          build-args: |
 #            DB_URL=${{ secrets.ENV_DB_URL }}
 #            DB_PORT=${{ secrets.ENV_DB_PORT }}
