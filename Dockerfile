@@ -9,7 +9,6 @@ ENV ENV_DB_URL ${DB_URL}
 ENV ENV_DB_PORT ${DB_PORT}
 ENV ENV_DB_USER ${DB_USER}
 ENV ENV_DB_PASS ${DB_PASS}
-ENV spring.profiles.active="prod"
 
 COPY . /usr/src/myapp
 WORKDIR /usr/src/myapp
