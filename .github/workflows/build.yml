@@ -7,7 +7,7 @@ name: Pokemon Build
 on:
   push:
     branches:
-      - test
+      - main
     paths-ignore:
       - README.md
       - LICENSE
