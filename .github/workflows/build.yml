@@ -41,11 +41,6 @@ jobs:
   deploy:
     runs-on: ubuntu-20.04
     needs: build
-    env:
-      DB_URL: ${{ secrets.ENV_DB_URL }}
-      DB_PORT: ${{ secrets.ENV_DB_PORT }}
-      DB_USER: ${{ secrets.ENV_DB_USER }}
-      DB_PASSWORD: ${{ secrets.ENV_DB_PASSWORD }}
     steps:
       - name: Setup QEMU
         uses: docker/setup-qemu-action@v1
@@ -71,3 +66,8 @@ jobs:
           file: ./Dockerfile
           push: true
           tags: wurahara/poke:latest
+          build-args: |
+            DB_URL=${{ secrets.ENV_DB_URL }}
+            DB_PORT=${{ secrets.ENV_DB_PORT }}
+            DB_USER=${{ secrets.ENV_DB_USER }}
+            DB_PASS=${{ secrets.ENV_DB_PASSWORD }}

@@ -1,5 +1,5 @@
 spring:
   datasource:
-    url: jdbc:mysql://${DB_URL}:${DB_PORT}/pokemon
-    username: ${DB_USER}
-    password: ${DB_PASSWORD}
+    url: jdbc:mysql://${ENV_DB_URL}:${ENV_DB_PORT}/pokemon
+    username: ${ENV_DB_USER}
+    password: ${ENV_DB_PASS}
