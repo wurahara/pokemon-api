@@ -8,6 +8,7 @@ on:
   push:
     branches:
       - main
+      - publish
     paths-ignore:
       - README.md
       - LICENSE
@@ -63,7 +64,9 @@ jobs:
           context: ./
           file: ./Dockerfile
           push: true
-          tags: wurahara/poke:latest
+          tags: |
+            ${{ secrets.DOCKER_HUB_USERNAME }}/poke:latest
+            ${{ secrets.DOCKER_HUB_USERNAME }}/poke:$GITHUB_RUN_NUMBER
           build-args: |
             DB_URL=${{ secrets.ENV_DB_URL }}
             DB_PORT=${{ secrets.ENV_DB_PORT }}
