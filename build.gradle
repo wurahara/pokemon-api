@@ -5,7 +5,7 @@ plugins {
 }
 
 group = 'cn.herculas'
-version = '0.0.1-SNAPSHOT'
+version = 'latest'
 sourceCompatibility = '11'
 
 configurations {
