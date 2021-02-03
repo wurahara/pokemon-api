@@ -66,7 +66,7 @@ jobs:
           push: true
           tags: |
             ${{ secrets.DOCKER_HUB_USERNAME }}/poke:latest
-            ${{ secrets.DOCKER_HUB_USERNAME }}/poke:${{ github.run_id }}
+            ${{ secrets.DOCKER_HUB_USERNAME }}/poke:${{ github.run_number }}
           build-args: |
             DB_URL=${{ secrets.ENV_DB_URL }}
             DB_PORT=${{ secrets.ENV_DB_PORT }}
